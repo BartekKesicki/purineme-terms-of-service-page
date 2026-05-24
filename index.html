@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purine Me — Regulamin / Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg:        #f7f6f2;
+      --surface:   #ffffff;
+      --accent:    #2d6a5a;
+      --accent-lt: #e6f0ed;
+      --accent-dk: #1e4a3e;
+      --text:      #1a1a1a;
+      --muted:     #6b7280;
+      --border:    #e2e0d9;
+      --warn-bg:   #fff8ed;
+      --warn-bdr:  #f59e0b;
+      --fill-bg:   #fef3cd;
+      --fill-bdr:  #e0a800;
+      --radius:    10px;
+      --max-w:     780px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* ── TOP BAR ── */
+    header {
+      background: var(--accent-dk);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .02em;
+    }
+    .logo-sub {
+      font-size: .72rem;
+      color: rgba(255,255,255,.55);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-top: 1px;
+    }
+
+    /* language toggle */
+    .lang-toggle {
+      display: flex;
+      gap: 6px;
+      background: rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,.65);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      padding: 5px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .18s, color .18s;
+    }
+    .lang-btn.active {
+      background: #fff;
+      color: var(--accent-dk);
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── HERO BLOCK ── */
+    .hero {
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-type {
+      display: inline-block;
+      background: var(--accent-lt);
+      color: var(--accent-dk);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--accent-dk);
+      margin-bottom: 12px;
+    }
+    .hero-meta {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .hero-meta strong { color: var(--text); }
+
+    /* ── FILL PLACEHOLDER ── */
+    .fill {
+      background: var(--fill-bg);
+      border: 1.5px dashed var(--fill-bdr);
+      border-radius: 5px;
+      padding: 2px 8px;
+      font-weight: 500;
+      color: #92400e;
+      font-size: .88em;
+      white-space: nowrap;
+    }
+
+    /* ── DISCLAIMER BOX ── */
+    .notice {
+      background: var(--warn-bg);
+      border-left: 4px solid var(--warn-bdr);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 28px 0;
+      font-size: .92rem;
+    }
+    .notice strong { color: #92400e; }
+
+    /* ── TOC ── */
+    .toc-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .toc-wrap h2 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-dk);
+      margin-bottom: 14px;
+      letter-spacing: .03em;
+    }
+    .toc {
+      list-style: none;
+      columns: 2;
+      column-gap: 24px;
+    }
+    @media(max-width:560px){ .toc { columns: 1; } }
+    .toc li { break-inside: avoid; margin-bottom: 4px; }
+    .toc a {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: .87rem;
+      line-height: 1.5;
+      display: flex;
+      gap: 6px;
+      transition: color .15s;
+    }
+    .toc a:hover { color: var(--accent-dk); text-decoration: underline; }
+    .toc-num { color: var(--muted); font-size: .78rem; min-width: 22px; padding-top: 2px; }
+
+    /* ── SECTIONS ── */
+    section {
+      margin-top: 48px;
+      scroll-margin-top: 88px;
+    }
+    section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--accent-dk);
+      border-bottom: 2px solid var(--accent-lt);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .sec-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 7px;
+      white-space: nowrap;
+    }
+    section h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 22px 0 8px;
+    }
+    section p { margin-bottom: 12px; }
+    section ul, section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+    section li { margin-bottom: 6px; }
+    section a { color: var(--accent); }
+    section a:hover { color: var(--accent-dk); }
+
+    /* ── TIER TABLE ── */
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: .9rem;
+    }
+    .tier-table th {
+      background: var(--accent-dk);
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .tier-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .tier-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+    .tier-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .tier-table tr:nth-child(even) td { background: var(--bg); }
+    .yes { color: var(--accent); font-weight: 600; }
+    .no  { color: #9ca3af; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 64px;
+      padding-top: 28px;
+      color: var(--muted);
+      font-size: .83rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── LANGUAGE SWITCHING ── */
+    [data-lang] { display: none; }
+    body.lang-pl [data-lang="pl"] { display: revert; }
+    body.lang-en [data-lang="en"] { display: revert; }
+    body.lang-pl { }
+    body.lang-en { }
+  </style>
+</head>
+<body class="lang-pl">
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🫐</div>
+    <div>
+      <div class="logo-text">Purine Me</div>
+      <div class="logo-sub" data-lang="pl">Regulamin</div>
+      <div class="logo-sub" data-lang="en">Terms of Service</div>
+    </div>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('pl')">PL</button>
+    <button class="lang-btn"        onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- ══════════════ POLISH VERSION ══════════════ -->
+  <div data-lang="pl">
+
+    <div class="hero">
+      <div class="doc-type">Dokument prawny</div>
+      <h1>Regulamin korzystania z aplikacji Purine Me</h1>
+      <p class="hero-meta">
+        Wersja: 1.0 &nbsp;·&nbsp;
+        Ostatnia aktualizacja: <strong><span class="fill">24.05.2026</span></strong> &nbsp;·&nbsp;
+        Wydawca: <strong><span class="fill">Bartłomiej Kęsicki, jednoosobowa działalność gospodarcza</span></strong>
+      </p>
+    </div>
+
+    <div class="notice">
+      <strong>⚕️ Zastrzeżenie medyczne.</strong> Aplikacja Purine Me nie jest urządzeniem medycznym, produktem leczniczym ani narzędziem diagnostycznym. Dane i obliczenia mają wyłącznie charakter informacyjny i edukacyjny. Nie zastępują porady lekarza, dietetyka klinicznego ani badań laboratoryjnych. Wszelkie decyzje dotyczące zdrowia należy podejmować we współpracy z lekarzem lub innym wykwalifikowanym specjalistą medycznym.
+    </div>
+
+    <!-- TOC PL -->
+    <div class="toc-wrap">
+      <h2>Spis treści</h2>
+      <ol class="toc">
+        <li><a href="#pl-1"><span class="toc-num">1.</span>Definicje</a></li>
+        <li><a href="#pl-2"><span class="toc-num">2.</span>Podmiot świadczący usługę</a></li>
+        <li><a href="#pl-3"><span class="toc-num">3.</span>Akceptacja Regulaminu</a></li>
+        <li><a href="#pl-4"><span class="toc-num">4.</span>Wymagania i eligibility</a></li>
+        <li><a href="#pl-5"><span class="toc-num">5.</span>Opis usługi i funkcji</a></li>
+        <li><a href="#pl-6"><span class="toc-num">6.</span>Subskrypcja Premium</a></li>
+        <li><a href="#pl-7"><span class="toc-num">7.</span>Reklamy (tier Free)</a></li>
+        <li><a href="#pl-8"><span class="toc-num">8.</span>Dane użytkownika</a></li>
+        <li><a href="#pl-9"><span class="toc-num">9.</span>Treści tworzone przez użytkownika</a></li>
+        <li><a href="#pl-10"><span class="toc-num">10.</span>Własność intelektualna</a></li>
+        <li><a href="#pl-11"><span class="toc-num">11.</span>Zastrzeżenia dot. dokładności</a></li>
+        <li><a href="#pl-12"><span class="toc-num">12.</span>Powiadomienia lokalne</a></li>
+        <li><a href="#pl-13"><span class="toc-num">13.</span>Aktualizacje aplikacji</a></li>
+        <li><a href="#pl-14"><span class="toc-num">14.</span>Zakaz niewłaściwego użycia</a></li>
+        <li><a href="#pl-15"><span class="toc-num">15.</span>Wyłączenie gwarancji</a></li>
+        <li><a href="#pl-16"><span class="toc-num">16.</span>Ograniczenie odpowiedzialności</a></li>
+        <li><a href="#pl-17"><span class="toc-num">17.</span>Rozwiązanie umowy</a></li>
+        <li><a href="#pl-18"><span class="toc-num">18.</span>Podmioty trzecie</a></li>
+        <li><a href="#pl-19"><span class="toc-num">19.</span>Zmiany Regulaminu</a></li>
+        <li><a href="#pl-20"><span class="toc-num">20.</span>Prawo właściwe i spory</a></li>
+        <li><a href="#pl-21"><span class="toc-num">21.</span>Polityka prywatności</a></li>
+        <li><a href="#pl-22"><span class="toc-num">22.</span>Kontakt</a></li>
+      </ol>
+    </div>
+
+    <!-- §1 -->
+    <section id="pl-1">
+      <h2><span class="sec-num">§ 1</span>Definicje</h2>
+      <p>Na potrzeby niniejszego Regulaminu stosuje się następujące pojęcia:</p>
+      <ul>
+        <li><strong>Aplikacja</strong> – mobilna aplikacja Purine Me (Android / iOS), przeznaczona do śledzenia diety niskopurynowej.</li>
+        <li><strong>Wydawca</strong> – <span class="fill">Bartłomiej Kęsicki, JDG, ul. Wiśniowa 5, 06-150 Świercze, Polska</span>, podmiot udostępniający Aplikację.</li>
+        <li><strong>Użytkownik</strong> – osoba fizyczna, która pobrała i korzysta z Aplikacji.</li>
+        <li><strong>Tier Free / Podstawowy</strong> – wariant Aplikacji bez opłat, z reklamami i funkcjonalnością ograniczoną zgodnie z §5.</li>
+        <li><strong>Subskrypcja Premium</strong> – płatny, cyklicznie odnawiany dostęp do rozszerzonych funkcji Aplikacji.</li>
+        <li><strong>RevenueCat</strong> – podmiot trzeci zarządzający statusem Subskrypcji Premium.</li>
+        <li><strong>Sklep</strong> – Google Play Store lub Apple App Store, za pośrednictwem którego Użytkownik pobiera Aplikację i dokonuje płatności.</li>
+        <li><strong>Regulamin</strong> – niniejszy dokument.</li>
+        <li><strong>Polityka prywatności</strong> – odrębny dokument określający zasady przetwarzania danych, dostępny w Ustawieniach Aplikacji.</li>
+      </ul>
+    </section>
+
+    <!-- §2 -->
+    <section id="pl-2">
+      <h2><span class="sec-num">§ 2</span>Podmiot świadczący usługę</h2>
+      <p>Aplikację udostępnia:</p>
+      <ul>
+        <li>Nazwa: <span class="fill">Bartłomiej Kęsicki</span></li>
+        <li>Forma prawna: <span class="fill">Jednoosobowa działalność gospodarcza (JDG)</span></li>
+        <li>Adres: <span class="fill">ul. Wiśniowa 5, 06-150 Świercze, Polska</span></li>
+        <li>E-mail: <span class="fill">bartek.develop33@gmail.com</span></li>
+      </ul>
+      <p>Aplikacja dostępna jest w Google Play Store (identyfikator pakietu: <code>bart.sek.purine_me</code>) oraz w Apple App Store.</p>
+    </section>
+
+    <!-- §3 -->
+    <section id="pl-3">
+      <h2><span class="sec-num">§ 3</span>Akceptacja Regulaminu i zastrzeżenie medyczne</h2>
+      <p>Korzystanie z Aplikacji jest równoznaczne z akceptacją niniejszego Regulaminu oraz Polityki prywatności. Przy pierwszym uruchomieniu i wprowadzaniu danych profilu (onboarding) oraz każdorazowo przy generowaniu planu diety, Użytkownik zobowiązany jest zaakceptować zastrzeżenie medyczne poprzez zaznaczenie pola wyboru (checkbox „Akceptuję"). Bez zaznaczenia tego pola korzystanie z danych funkcji jest niemożliwe.</p>
+      <div class="notice">
+        <strong>Pełne zastrzeżenie medyczne:</strong> „Dane i obliczenia udostępniane przez Aplikację mają charakter wyłącznie informacyjny i edukacyjny. Opierają się na szacunkowych wzorach matematycznych i NIE stanowią porady medycznej, diagnostycznej ani terapeutycznej. Obliczenia nie uwzględniają wszystkich indywidualnych czynników zdrowotnych (m.in. stosowanych leków, chorób współistniejących, poziomu stresu). Aby uzyskać dokładne zalecenia dotyczące zdrowia i diety, należy skonsultować się z lekarzem lub wykwalifikowanym dietetykiem klinicznym. Użytkownik korzysta z Aplikacji na własną odpowiedzialność."
+      </div>
+      <p>Użytkownik przyjmuje do wiadomości, że Aplikacja nie jest urządzeniem medycznym ani produktem leczniczym w rozumieniu obowiązujących przepisów prawa.</p>
+    </section>
+
+    <!-- §4 -->
+    <section id="pl-4">
+      <h2><span class="sec-num">§ 4</span>Wymagania i eligibility</h2>
+      <p>Z Aplikacji mogą korzystać wyłącznie osoby, które ukończyły <strong><span class="fill">16</span> lat</strong>. Pobierając i uruchamiając Aplikację, Użytkownik oświadcza, że spełnia powyższy wymóg wiekowy.</p>
+      <p>Aplikacja nie wymaga zakładania konta – usługa powiązana jest z urządzeniem mobilnym Użytkownika. Użytkownik zobowiązuje się do podawania prawdziwych danych profilu (masa ciała, wiek, płeć, wzrost) w zakresie, w jakim mają one wpływ na obliczenia prezentowane przez Aplikację.</p>
+      <p>Aplikacja nie jest skierowana do osób poniżej wskazanego wieku. Wydawca nie zbiera świadomie danych od osób niepełnoletnich. W razie powzięcia informacji o korzystaniu z Aplikacji przez osobę poniżej wymaganego wieku, Wydawca podejmie stosowne działania zgodnie z obowiązującymi przepisami.</p>
+    </section>
+
+    <!-- §5 -->
+    <section id="pl-5">
+      <h2><span class="sec-num">§ 5</span>Opis usługi i funkcji</h2>
+      <p>Aplikacja Purine Me jest narzędziem lifestyle / edukacyjnym służącym do śledzenia diety niskopurynowej, szacowania poziomu kwasu moczowego, kalorii, nawodnienia i planowania posiłków.</p>
+
+      <h3>5.1 Tier Free (Podstawowy)</h3>
+      <ul>
+        <li>Śledzenie posiłków, produktów, spożycia wody i masy ciała.</li>
+        <li>Dashboard: szacowany poziom kwasu moczowego (24h), BMI, BMR, kalorie, statystyki.</li>
+        <li>Katalog produktów oraz możliwość dodawania własnych produktów.</li>
+        <li>Demo planu diety: 1 dzień, cel kaloryczny z profilu (TDEE), ten sam przykładowy plan przy każdym odświeżeniu; maksymalnie 2 alternatywy przy zamianie posiłku.</li>
+        <li>Powiadomienia lokalne (po wyrażeniu zgody systemowej).</li>
+        <li>Reklamy Google AdMob (banner + reklamy pełnoekranowe).</li>
+        <li>Tutorial / onboarding.</li>
+      </ul>
+
+      <h3>5.2 Tier Premium (Płatny)</h3>
+      <ul>
+        <li>Wszystkie funkcje Tier Free <strong>bez reklam</strong>.</li>
+        <li>Pełny generator planu diety: 3, 5, 7 lub 14 dni.</li>
+        <li>Własny cel kaloryczny, wykluczenia i preferencje produktów, różnorodność składników.</li>
+        <li>Pełna lista alternatyw przy zamianie posiłków.</li>
+        <li>Zapis planów diety w lokalnej bazie danych (SQLite).</li>
+        <li>Lista zakupów powiązana z planem diety.</li>
+        <li>Logowanie posiłków bezpośrednio z planu diety.</li>
+        <li>Opcjonalna blokada zrzutów ekranu na ekranach Premium.</li>
+      </ul>
+
+      <h3>5.3 Funkcje planowane („Coming Soon")</h3>
+      <p>Niektóre funkcje (m.in. moduł ćwiczeń) są widoczne w interfejsie Aplikacji jako planowane, lecz jeszcze niedostępne. Wydawca zastrzega prawo do dodawania, modyfikowania lub usuwania funkcji bez uprzedniego powiadomienia. Dostęp do funkcji w wersji beta lub w fazie testów może być ograniczony czasowo lub funkcjonalnie.</p>
+
+      <table class="tier-table">
+        <thead>
+          <tr><th>Funkcja</th><th>Free</th><th>Premium</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Śledzenie posiłków i wody</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Dashboard (kwas moczowy, BMI, BMR)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Własne produkty</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Demo planu diety (1 dzień)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Pełny generator planu (3–14 dni)</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>Lista zakupów</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>Zapis planu w bazie</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>Reklamy AdMob</td><td>Tak</td><td class="yes">Brak</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- §6 -->
+    <section id="pl-6">
+      <h2><span class="sec-num">§ 6</span>Subskrypcja Premium — warunki handlowe</h2>
+
+      <h3>6.1 Model płatności</h3>
+      <p>Subskrypcja Premium jest płatna cyklicznie. Rzeczywista cena, waluta i okres rozliczeniowy wyświetlane są w Sklepie w momencie zakupu i mogą różnić się w zależności od regionu. Orientacyjna cena to <strong><span class="fill">21,99 PLN</span> miesięcznie</strong> <span class="fill"></span>. Płatność obsługiwana jest przez Google Play Store lub Apple App Store za pośrednictwem platformy RevenueCat.</p>
+
+      <h3>6.2 Okres próbny</h3>
+      <p>Nowi Użytkownicy mogą skorzystać z <strong>7-dniowego bezpłatnego okresu próbnego</strong> Premium (jeśli dostępny w danym Sklepie dla danego regionu i konta). Szczegóły okresu próbnego, w tym zasady kwalifikowalności, określa Sklep. Jeśli Subskrypcja nie zostanie anulowana przed upływem okresu próbnego, zostanie automatycznie pobrana opłata za pierwszy pełny okres rozliczeniowy.</p>
+
+      <h3>6.3 Automatyczne odnowienie</h3>
+      <p>Subskrypcja Premium <strong>odnawia się automatycznie</strong> na kolejny okres rozliczeniowy, chyba że Użytkownik anuluje ją co najmniej 24 godziny przed końcem bieżącego okresu (lub zgodnie z zasadami właściwego Sklepu). Opłata pobierana jest z konta Apple ID lub konta Google Play powiązanego z urządzeniem Użytkownika.</p>
+
+      <h3>6.4 Zarządzanie i anulowanie subskrypcji</h3>
+      <p>Subskrypcją zarządza się wyłącznie w Sklepie, za pośrednictwem którego dokonano zakupu:</p>
+      <ul>
+        <li><strong>iOS:</strong> Ustawienia Aplikacji → Zarządzaj subskrypcją → App Store (<a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>)</li>
+        <li><strong>Android:</strong> Ustawienia Aplikacji → Zarządzaj subskrypcją → Google Play (<a href="https://play.google.com/store/account/subscriptions?package=bart.sek.purine_me" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a>)</li>
+      </ul>
+      <p>Po anulowaniu dostęp Premium pozostaje aktywny do końca opłaconego okresu lub okresu próbnego, zgodnie z zasadami Sklepu.</p>
+
+      <h3>6.5 Skutki wygaśnięcia lub anulowania Subskrypcji Premium</h3>
+      <div class="notice">
+        <strong>⚠️ Ważne:</strong> Po wygaśnięciu lub anulowaniu Subskrypcji Premium Aplikacja <strong>trwale usuwa</strong> zapisane plany diety oraz czyści stan listy zakupów przechowywany lokalnie na urządzeniu. Użytkownik powraca do Tier Free. Danych usuniętych w ten sposób nie można odzyskać. Wydawca zaleca eksport lub notatkę istotnych informacji przed anulowaniem.
+      </div>
+
+      <h3>6.6 Nieudany zakup</h3>
+      <p>W przypadku niepowodzenia transakcji (odrzucenie płatności, anulowanie przez Użytkownika) Subskrypcja nie zostaje aktywowana i nie pobierana jest żadna opłata.</p>
+
+      <h3>6.7 Zwroty</h3>
+      <p>Aplikacja nie obsługuje zwrotów bezpośrednio. Wszelkie wnioski o zwrot należy kierować do właściwego Sklepu (Apple App Store lub Google Play Store) zgodnie z ich politykami zwrotów. Wydawca nie ma możliwości dokonywania zwrotów z pominięciem Sklepu.</p>
+    </section>
+
+    <!-- §7 -->
+    <section id="pl-7">
+      <h2><span class="sec-num">§ 7</span>Reklamy (Tier Free)</h2>
+      <p>Użytkownicy korzystający z Tier Free narażeni są na wyświetlanie reklam dostarczanych przez usługę Google AdMob (banery oraz reklamy pełnoekranowe). Reklamy mogą zawierać linki do treści, produktów lub usług podmiotów trzecich. Wydawca nie ponosi odpowiedzialności za treść reklam ani za produkty, usługi lub praktyki reklamodawców.</p>
+      <p>Szczegółowe informacje dotyczące przetwarzania danych w związku z personalizacją reklam, korzystaniem z narzędzia zgody UMP (Consent SDK) oraz praw Użytkownika w zakresie zgody na reklamy spersonalizowane zawarte są w Polityce prywatności.</p>
+    </section>
+
+    <!-- §8 -->
+    <section id="pl-8">
+      <h2><span class="sec-num">§ 8</span>Dane użytkownika i przechowywanie lokalne</h2>
+      <p>Aplikacja nie posiada serwera backendowego. Wszystkie dane Użytkownika (profil, posiłki, produkty, plany diety, ustawienia) przechowywane są <strong>wyłącznie lokalnie na urządzeniu</strong> Użytkownika (SQLite, SharedPreferences). Dane nie są przesyłane na serwery Wydawcy.</p>
+      <p>Użytkownik ponosi odpowiedzialność za bezpieczeństwo urządzenia oraz za wykonywanie kopii zapasowych danych w zakresie możliwości systemu operacyjnego. Aplikacja nie oferuje wbudowanej funkcji eksportu danych.</p>
+      <p>Funkcja <strong>Wyczyść dane</strong> (Ustawienia → Wyczyść dane) nieodwracalnie usuwa wszystkie dane Użytkownika z Aplikacji i resetuje ją do stanu fabrycznego. Operacja ta jest nieodwracalna.</p>
+      <p>Szczegółowe informacje o przetwarzaniu danych, w tym w zakresie RODO, zawarte są w Polityce prywatności dostępnej w Ustawieniach Aplikacji.</p>
+    </section>
+
+    <!-- §9 -->
+    <section id="pl-9">
+      <h2><span class="sec-num">§ 9</span>Treści tworzone przez użytkownika</h2>
+      <p>Użytkownik może tworzyć i edytować własne treści w Aplikacji: produkty (nazwy, kategorie, wartości odżywcze, zawartość kwasu moczowego), posiłki i składniki, dane profilu.</p>
+      <p>Treści Użytkownika przechowywane są wyłącznie lokalnie na urządzeniu. Wydawca nie ma do nich dostępu, nie moderuje ich i nie odpowiada za ich zawartość.</p>
+      <p>Użytkownik zobowiązuje się do:</p>
+      <ul>
+        <li>podawania rzetelnych i dokładnych wartości odżywczych we własnych produktach; odpowiedzialność za poprawność wprowadzonych danych leży wyłącznie po stronie Użytkownika,</li>
+        <li>nietworzenia treści naruszających prawo lub prawa osób trzecich,</li>
+        <li>nieinterpretowania i nieprezentowania treści Aplikacji jako indywidualnej porady medycznej ani nie wprowadzania w błąd innych osób co do medycznego charakteru wyników.</li>
+      </ul>
+    </section>
+
+    <!-- §10 -->
+    <section id="pl-10">
+      <h2><span class="sec-num">§ 10</span>Własność intelektualna</h2>
+      <p>Aplikacja, jej kod źródłowy, interfejs użytkownika, logotypy, nazwa „Purine Me", wbudowane katalogi produktów, przepisy, szablony posiłków i inne zasoby (assets) stanowią własność intelektualną Wydawcy lub są licencjonowane na jego rzecz przez podmioty trzecie.</p>
+      <p>Wydawca udziela Użytkownikowi ograniczonej, niewyłącznej, nieprzenoszalnej, odwołalnej licencji na korzystanie z Aplikacji wyłącznie w celach osobistych, niekomercyjnych, zgodnie z niniejszym Regulaminem.</p>
+      <p>Zabronione jest w szczególności:</p>
+      <ul>
+        <li>dekompilowanie, inżynieria wsteczna lub dezasemblacja Aplikacji,</li>
+        <li>kopiowanie, scrapowanie lub masowe pobieranie danych z katalogu produktów Aplikacji,</li>
+        <li>odsprzedawanie wygenerowanych planów diety jako własnej usługi komercyjnej,</li>
+        <li>tworzenie konkurencyjnej bazy danych produktów lub usługi opartej na zasobach Aplikacji,</li>
+        <li>usuwanie lub modyfikowanie oznaczeń praw autorskich i znaków towarowych Wydawcy.</li>
+      </ul>
+      <p>Kroje pisma Open Sans dostarczone są na licencji SIL Open Font License (OFL) — treść licencji dostępna w pliku <code>assets/google_fonts/OFL.txt</code> w paczce Aplikacji.</p>
+    </section>
+
+    <!-- §11 -->
+    <section id="pl-11">
+      <h2><span class="sec-num">§ 11</span>Zastrzeżenia dotyczące dokładności obliczeń</h2>
+      <p>Aplikacja prezentuje <strong>szacunkowe wartości</strong> obliczone na podstawie ogólnie dostępnych wzorów matematycznych, w tym m.in.:</p>
+      <ul>
+        <li>szacowany poziom kwasu moczowego (mg/dl) na podstawie posiłków z ostatnich 24h,</li>
+        <li>podstawowa przemiana materii (BMR) — wzór Mifflin–St Jeor,</li>
+        <li>całkowity dzienny wydatek energetyczny (TDEE) z uwzględnieniem poziomu aktywności,</li>
+        <li>budżet puryn i model stężenia we krwi (objętość krwi szacowana na podstawie płci i masy ciała),</li>
+        <li>plan diety: cel kaloryczny ±10%, model nawodnienia 3L/dzień (niezależny od zalogowanego spożycia wody na dashboardzie).</li>
+      </ul>
+      <p>Wydawca nie gwarantuje dokładności, kompletności ani aktualności prezentowanych wyników. Uzyskane wartości mogą istotnie różnić się od wyników badań laboratoryjnych. Zalecenia dietetyczne mają charakter ogólny i nie stanowią indywidualnej terapii ani diagnozy medycznej. Wydawca nie ponosi odpowiedzialności za decyzje zdrowotne podjęte wyłącznie na podstawie danych z Aplikacji.</p>
+    </section>
+
+    <!-- §12 -->
+    <section id="pl-12">
+      <h2><span class="sec-num">§ 12</span>Powiadomienia lokalne</h2>
+      <p>Aplikacja może wysyłać lokalne powiadomienia przypominające (m.in. o posiłkach, nawodnieniu, streakach). Funkcja ta jest opcjonalna i wymaga wyrażenia zgody na poziomie systemu operacyjnego urządzenia (Android 13+ / iOS).</p>
+      <p>Rodzaje i harmonogram powiadomień można konfigurować w Ustawieniach Aplikacji. Aplikacja stosuje model „smart push" — co do zasady maksymalnie jedno powiadomienie dziennie.</p>
+      <p>Wydawca nie gwarantuje niezawodności dostarczania powiadomień. Ich dostarczenie może być uzależnione od ustawień systemu operacyjnego, trybu oszczędzania baterii, braku uprawnień oraz innych czynników sprzętowych i programowych pozostających poza kontrolą Wydawcy. Powiadomienia generowane są lokalnie na urządzeniu — bez udziału zewnętrznych serwerów push.</p>
+    </section>
+
+    <!-- §13 -->
+    <section id="pl-13">
+      <h2><span class="sec-num">§ 13</span>Aktualizacje aplikacji</h2>
+      <p>Wydawca może udostępniać aktualizacje Aplikacji za pośrednictwem Google Play Store lub Apple App Store. Na urządzeniach z systemem Android Aplikacja może korzystać z mechanizmu Google Play In-App Update, który może wymagać zgody Użytkownika na natychmiastową aktualizację.</p>
+      <p>Wydawca zastrzega prawo do uzależnienia dalszego korzystania z Aplikacji od zainstalowania aktualizacji zawierającej poprawki bezpieczeństwa lub istotne zmiany. Funkcje Aplikacji mogą ulegać zmianie pomiędzy wersjami. Wydawca nie gwarantuje wsparcia dla starszych wersji systemu operacyjnego przez czas nieokreślony.</p>
+    </section>
+
+    <!-- §14 -->
+    <section id="pl-14">
+      <h2><span class="sec-num">§ 14</span>Zakaz niewłaściwego użycia</h2>
+      <p>Użytkownik zobowiązuje się korzystać z Aplikacji zgodnie z Regulaminem i obowiązującym prawem. W szczególności zabronione jest:</p>
+      <ul>
+        <li>korzystanie z Aplikacji w sposób naruszający przepisy prawa krajowego lub międzynarodowego,</li>
+        <li>obchodzenie lub manipulowanie systemem płatności lub autoryzacji (np. fałszowanie statusu Subskrypcji Premium poza oficjalnymi Sklepami),</li>
+        <li>automatyczne przetwarzanie, scrapowanie lub pobieranie danych z Aplikacji bez pisemnej zgody Wydawcy,</li>
+        <li>wprowadzanie w błąd co do medycznego lub diagnostycznego charakteru wyników generowanych przez Aplikację,</li>
+        <li>podszywanie się pod Wydawcę lub sugerowanie, że Aplikacja jest certyfikowanym wyrobem medycznym,</li>
+        <li>wszelkie inne działania mogące naruszać prawa Wydawcy lub podmiotów trzecich.</li>
+      </ul>
+    </section>
+
+    <!-- §15 -->
+    <section id="pl-15">
+      <h2><span class="sec-num">§ 15</span>Wyłączenie gwarancji</h2>
+      <p>Aplikacja udostępniana jest w stanie „takim, jaki jest" (<em>as is</em>) i „w miarę dostępności" (<em>as available</em>), bez jakichkolwiek gwarancji, wyraźnych ani dorozumianych, w najszerszym zakresie dopuszczalnym przez obowiązujące prawo, w tym w szczególności bez gwarancji przydatności do określonego celu, dokładności danych czy nieprzerwanego działania.</p>
+      <p>Powyższe wyłączenie gwarancji nie ma zastosowania w zakresie, w jakim obowiązujące przepisy prawa konsumenckiego (w szczególności przepisy polskie i unijne) nie zezwalają na takie wyłączenie.</p>
+    </section>
+
+    <!-- §16 -->
+    <section id="pl-16">
+      <h2><span class="sec-num">§ 16</span>Ograniczenie odpowiedzialności</h2>
+      <p>W najszerszym zakresie dozwolonym przez prawo Wydawca nie ponosi odpowiedzialności za:</p>
+      <ul>
+        <li>szkody pośrednie, przypadkowe, szczególne lub wynikowe, w tym utratę danych, przerwę w działaniu urządzenia lub inne szkody majątkowe wynikające z korzystania z Aplikacji lub niemożności korzystania z niej,</li>
+        <li>szkody zdrowotne lub majątkowe będące skutkiem podjęcia lub zaniechania decyzji zdrowotnych wyłącznie na podstawie danych prezentowanych przez Aplikację,</li>
+        <li>utratę zapisanych planów diety lub innych danych lokalnych w przypadkach określonych w §6.5 i §8.</li>
+      </ul>
+      <p>W przypadkach, gdy ograniczenie odpowiedzialności jest prawnie dopuszczalne, maksymalna łączna odpowiedzialność Wydawcy wobec Użytkownika nie przekroczy sumy opłat wniesionych przez Użytkownika za Subskrypcję Premium w ciągu <strong>12 miesięcy</strong> poprzedzających zdarzenie będące podstawą roszczenia. Jeżeli Użytkownik korzystał wyłącznie z Tier Free, maksymalna odpowiedzialność Wydawcy wynosi <strong>0 EUR / 0 PLN</strong>.</p>
+      <p>Powyższe ograniczenia nie mają zastosowania w zakresie, w jakim przepisy prawa bezwzględnie obowiązującego (w tym prawa konsumenckiego) wyłączają możliwość ich stosowania.</p>
+    </section>
+
+    <!-- §17 -->
+    <section id="pl-17">
+      <h2><span class="sec-num">§ 17</span>Rozwiązanie umowy i zakończenie dostępu</h2>
+      <p><strong>Przez Użytkownika:</strong> Użytkownik może w dowolnym momencie zakończyć korzystanie z Aplikacji poprzez jej odinstalowanie, skorzystanie z funkcji Wyczyść dane lub anulowanie Subskrypcji Premium w Sklepie. Odinstalowanie Aplikacji usuwa wszystkie lokalnie przechowywane dane.</p>
+      <p><strong>Przez Wydawcę:</strong> Wydawca zastrzega prawo do zawieszenia lub zaprzestania udostępniania Aplikacji lub jej poszczególnych funkcji, w tym zakończenia wsparcia dla określonych wersji systemu operacyjnego, z rozsądnym wyprzedzeniem, jeśli będzie to możliwe. W przypadku subskrybentów Premium, o ile okoliczności na to pozwolą, Wydawca podejmie starania o poinformowanie Użytkowników z odpowiednim wyprzedzeniem.</p>
+      <div class="notice">
+        <strong>Uwaga:</strong> Skorzystanie z funkcji Wyczyść dane jest operacją <strong>nieodwracalną</strong>. Wszystkie lokalne dane Aplikacji zostaną trwale usunięte z urządzenia.
+      </div>
+    </section>
+
+    <!-- §18 -->
+    <section id="pl-18">
+      <h2><span class="sec-num">§ 18</span>Podmioty trzecie i linki zewnętrzne</h2>
+      <p>Aplikacja korzysta z usług następujących podmiotów trzecich:</p>
+      <ul>
+        <li><strong>Google LLC</strong> — Google AdMob (reklamy), Google Play Store (dystrybucja i płatności), Google Play In-App Update.</li>
+        <li><strong>Apple Inc.</strong> — Apple App Store (dystrybucja i płatności).</li>
+        <li><strong>RevenueCat, Inc.</strong> — zarządzanie statusem Subskrypcji Premium.</li>
+      </ul>
+      <p>Aplikacja może zawierać linki do zewnętrznych stron internetowych (m.in. Polityki prywatności, zarządzania subskrypcją). Wydawca nie kontroluje i nie ponosi odpowiedzialności za treści, polityki ani praktyki tych stron. Użytkownik korzysta z nich na własne ryzyko i powinien zapoznać się z ich regulaminami i politykami prywatności.</p>
+    </section>
+
+    <!-- §19 -->
+    <section id="pl-19">
+      <h2><span class="sec-num">§ 19</span>Zmiany Regulaminu</h2>
+      <p>Wydawca zastrzega prawo do zmiany niniejszego Regulaminu w dowolnym momencie. O istotnych zmianach Użytkownicy będą informowani poprzez: <span class="fill">aktualizację daty i numeru wersji na tej stronie oraz, w miarę możliwości, komunikat w Aplikacji</span>. Data „Ostatnia aktualizacja" widoczna w nagłówku dokumentu wskazuje datę ostatniej modyfikacji.</p>
+      <p>Kontynuowanie korzystania z Aplikacji po wejściu w życie zmian jest równoznaczne z akceptacją zmienionego Regulaminu. W przypadku istotnych zmian wpływających na prawa Użytkownika Wydawca może wymagać ponownej akceptacji Regulaminu przy następnym uruchomieniu Aplikacji.</p>
+    </section>
+
+    <!-- §20 -->
+    <section id="pl-20">
+      <h2><span class="sec-num">§ 20</span>Prawo właściwe i rozstrzyganie sporów</h2>
+      <p>Niniejszy Regulamin podlega przepisom prawa <span class="fill">polskiego</span>. Wszelkie spory wynikające z Regulaminu lub korzystania z Aplikacji będą rozstrzygane przez Sąd Rejonowy w Pułtusku lub Sąd Okręgowy w Ostrołęce (w zależności od wartości przedmiotu sporu) <span class="fill"></span>.</p>
+      <p>Dla Użytkowników będących konsumentami zamieszkałymi na terytorium Unii Europejskiej zastosowanie mają bezwzględnie obowiązujące przepisy prawa konsumenckiego państwa zamieszkania Użytkownika, w zakresie, w jakim zapewniają wyższy poziom ochrony. Użytkownicy będący konsumentami z UE mogą skorzystać z unijnej platformy ODR (Online Dispute Resolution) dostępnej pod adresem: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. E-mail Wydawcy do celów ODR: <span class="fill">bartek.develop33@gmail.com</span>.</p>
+    </section>
+
+    <!-- §21 -->
+    <section id="pl-21">
+      <h2><span class="sec-num">§ 21</span>Polityka prywatności</h2>
+      <p>Niniejszy Regulamin i Polityka prywatności stanowią odrębne dokumenty. Polityka prywatności określa zasady przetwarzania danych osobowych oraz danych związanych z korzystaniem z Aplikacji. Politykę prywatności można znaleźć w Ustawieniach Aplikacji (Ustawienia → Prywatność i dane) lub pod adresem: <a href="https://bartekkesicki.github.io/purineMePrivacyPolicy/private%20policy.html" target="_blank" rel="noopener">https://bartekkesicki.github.io/purineMePrivacyPolicy/private%20policy.html</a>.</p>
+    </section>
+
+    <!-- §22 -->
+    <section id="pl-22">
+      <h2><span class="sec-num">§ 22</span>Kontakt</h2>
+      <p>W sprawach dotyczących Regulaminu, reklamacji lub wsparcia technicznego prosimy o kontakt:</p>
+      <ul>
+        <li>E-mail: <span class="fill">bartek.develop33@gmail.com</span></li>
+        <li>Adres korespondencyjny: <span class="fill">ul. Wiśniowa 5, 06-150 Świercze, Polska</span></li>
+      </ul>
+      <p>Wydawca dołoży starań, aby odpowiedzieć na zapytania w rozsądnym terminie <span class="fill">do 14 dni roboczych</span>.</p>
+    </section>
+
+    <footer>
+      <div>© <span class="fill">Bartłomiej Kęsicki</span> · Wszelkie prawa zastrzeżone</div>
+      <div>
+        <a href="https://bartekkesicki.github.io/purineMePrivacyPolicy/private%20policy.html" target="_blank" rel="noopener">Polityka prywatności</a>
+      </div>
+      <div>Ostatnia aktualizacja: <span class="fill">24.05.2026</span></div>
+    </footer>
+
+  </div><!-- /data-lang=pl -->
+
+
+  <!-- ══════════════ ENGLISH VERSION ══════════════ -->
+  <div data-lang="en">
+
+    <div class="hero">
+      <div class="doc-type">Legal Document</div>
+      <h1>Terms of Service — Purine Me</h1>
+      <p class="hero-meta">
+        Version: 1.0 &nbsp;·&nbsp;
+        Last updated: <strong><span class="fill">24.05.2026</span></strong> &nbsp;·&nbsp;
+        Publisher: <strong><span class="fill">Bartłomiej Kęsicki, sole trader</span></strong>
+      </p>
+    </div>
+
+    <div class="notice">
+      <strong>⚕️ Medical Disclaimer.</strong> Purine Me is not a medical device, medicinal product, or diagnostic tool. All data and calculations are provided for informational and educational purposes only. They do not replace the advice of a physician, clinical dietitian, or laboratory test results. All health-related decisions should be made in consultation with a qualified medical professional.
+    </div>
+
+    <!-- TOC EN -->
+    <div class="toc-wrap">
+      <h2>Table of Contents</h2>
+      <ol class="toc">
+        <li><a href="#en-1"><span class="toc-num">1.</span>Definitions</a></li>
+        <li><a href="#en-2"><span class="toc-num">2.</span>Service Provider</a></li>
+        <li><a href="#en-3"><span class="toc-num">3.</span>Acceptance of Terms</a></li>
+        <li><a href="#en-4"><span class="toc-num">4.</span>Eligibility</a></li>
+        <li><a href="#en-5"><span class="toc-num">5.</span>Description of Service</a></li>
+        <li><a href="#en-6"><span class="toc-num">6.</span>Premium Subscription</a></li>
+        <li><a href="#en-7"><span class="toc-num">7.</span>Advertisements (Free Tier)</a></li>
+        <li><a href="#en-8"><span class="toc-num">8.</span>User Data &amp; Local Storage</a></li>
+        <li><a href="#en-9"><span class="toc-num">9.</span>User-Generated Content</a></li>
+        <li><a href="#en-10"><span class="toc-num">10.</span>Intellectual Property</a></li>
+        <li><a href="#en-11"><span class="toc-num">11.</span>Accuracy Disclaimer</a></li>
+        <li><a href="#en-12"><span class="toc-num">12.</span>Local Notifications</a></li>
+        <li><a href="#en-13"><span class="toc-num">13.</span>App Updates</a></li>
+        <li><a href="#en-14"><span class="toc-num">14.</span>Prohibited Use</a></li>
+        <li><a href="#en-15"><span class="toc-num">15.</span>Disclaimer of Warranties</a></li>
+        <li><a href="#en-16"><span class="toc-num">16.</span>Limitation of Liability</a></li>
+        <li><a href="#en-17"><span class="toc-num">17.</span>Termination</a></li>
+        <li><a href="#en-18"><span class="toc-num">18.</span>Third Parties &amp; Links</a></li>
+        <li><a href="#en-19"><span class="toc-num">19.</span>Changes to Terms</a></li>
+        <li><a href="#en-20"><span class="toc-num">20.</span>Governing Law &amp; Disputes</a></li>
+        <li><a href="#en-21"><span class="toc-num">21.</span>Privacy Policy</a></li>
+        <li><a href="#en-22"><span class="toc-num">22.</span>Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- §1 EN -->
+    <section id="en-1">
+      <h2><span class="sec-num">§ 1</span>Definitions</h2>
+      <ul>
+        <li><strong>"App"</strong> – the Purine Me mobile application for Android and iOS, designed for tracking a low-purine diet.</li>
+        <li><strong>"Publisher" / "We" / "Us"</strong> – <span class="fill">Bartłomiej Kęsicki, sole trader, ul. Wiśniowa 5, 06-150 Świercze, Poland</span>, the entity making the App available.</li>
+        <li><strong>"User" / "You"</strong> – the individual who downloads and uses the App.</li>
+        <li><strong>"Free Tier"</strong> – the no-cost variant of the App with advertisements and limited functionality as described in §5.</li>
+        <li><strong>"Premium Subscription"</strong> – a paid, auto-renewing subscription granting access to extended features.</li>
+        <li><strong>"RevenueCat"</strong> – a third-party platform managing the Premium Subscription status.</li>
+        <li><strong>"Store"</strong> – Google Play Store or Apple App Store through which the User downloads the App and makes payments.</li>
+        <li><strong>"Terms"</strong> – these Terms of Service.</li>
+        <li><strong>"Privacy Policy"</strong> – a separate document governing data processing, available in App Settings.</li>
+      </ul>
+    </section>
+
+    <!-- §2 EN -->
+    <section id="en-2">
+      <h2><span class="sec-num">§ 2</span>Service Provider</h2>
+      <p>The App is provided by:</p>
+      <ul>
+        <li>Name: <span class="fill">Bartłomiej Kęsicki</span></li>
+        <li>Legal form: <span class="fill">Sole trader / Individual business (JDG)</span></li>
+        <li>Address: <span class="fill">ul. Wiśniowa 5, 06-150 Świercze, Poland</span></li>
+        <li>Email: <span class="fill">bartek.develop33@gmail.com</span></li>
+      </ul>
+      <p>The App is available on Google Play Store (package ID: <code>bart.sek.purine_me</code>) and the Apple App Store.</p>
+    </section>
+
+    <!-- §3 EN -->
+    <section id="en-3">
+      <h2><span class="sec-num">§ 3</span>Acceptance of Terms and Medical Disclaimer</h2>
+      <p>By downloading, installing, or using the App, you agree to these Terms and the Privacy Policy. During the first launch and data entry (onboarding / Insert Your Data) and each time a diet plan is generated, you are required to accept the medical disclaimer by checking the "I accept" checkbox. Proceeding without acceptance is not possible.</p>
+      <div class="notice">
+        <strong>Full Medical Disclaimer:</strong> "Data and calculations provided by the App are for informational and educational purposes only. They are based on estimated mathematical formulas and do NOT constitute medical, diagnostic, or therapeutic advice. Calculations do not account for all individual health factors (including medications, co-morbidities, and stress levels). To receive accurate health and dietary recommendations, consult a physician or a qualified clinical dietitian. You use the App at your own risk."
+      </div>
+      <p>You acknowledge that the App is not a medical device or medicinal product under applicable law.</p>
+    </section>
+
+    <!-- §4 EN -->
+    <section id="en-4">
+      <h2><span class="sec-num">§ 4</span>Eligibility</h2>
+      <p>The App may only be used by individuals who are at least <strong><span class="fill">16</span> years old</strong>. By downloading and using the App, you confirm that you meet this age requirement.</p>
+      <p>The App does not require account creation — the service is device-bound. You agree to provide accurate profile data (body weight, age, sex, height) to the extent such data affects the calculations presented by the App.</p>
+      <p>The App is not directed at persons below the stated minimum age. If we become aware that a minor has used the App, we will take appropriate steps under applicable law.</p>
+    </section>
+
+    <!-- §5 EN -->
+    <section id="en-5">
+      <h2><span class="sec-num">§ 5</span>Description of Service and Features</h2>
+      <p>Purine Me is a lifestyle and educational tool for tracking a low-purine diet, estimating uric acid levels, calories, hydration, and planning meals.</p>
+
+      <h3>5.1 Free Tier</h3>
+      <ul>
+        <li>Meal, product, water intake, and body weight tracking.</li>
+        <li>Dashboard: estimated uric acid (24h), BMI, BMR, calories, statistics.</li>
+        <li>Product catalogue and custom products.</li>
+        <li>Diet plan demo: 1 day, calorie goal from profile (TDEE), same sample plan each time; max 2 alternatives when swapping a meal.</li>
+        <li>Local notifications (subject to OS permission).</li>
+        <li>Google AdMob advertisements (banner + interstitial).</li>
+        <li>Tutorial / onboarding.</li>
+      </ul>
+
+      <h3>5.2 Premium Tier (Paid)</h3>
+      <ul>
+        <li>All Free Tier features <strong>without ads</strong>.</li>
+        <li>Full diet plan generator: 3, 5, 7, or 14 days.</li>
+        <li>Custom calorie goal, product exclusions and preferences, ingredient variety settings.</li>
+        <li>Full list of alternatives when swapping meals.</li>
+        <li>Saved diet plans in local database (SQLite).</li>
+        <li>Shopping list linked to the diet plan.</li>
+        <li>Log meals directly from the diet plan.</li>
+        <li>Optional screenshot protection on Premium screens.</li>
+      </ul>
+
+      <h3>5.3 Planned Features ("Coming Soon")</h3>
+      <p>Some features (e.g., the Exercises module) are visible in the App interface as planned but not yet available. The Publisher reserves the right to add, modify, or remove features without prior notice. Access to beta or trial features may be limited in time or functionality.</p>
+
+      <table class="tier-table">
+        <thead>
+          <tr><th>Feature</th><th>Free</th><th>Premium</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Meal &amp; water tracking</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Dashboard (uric acid, BMI, BMR)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Custom products</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Diet plan demo (1 day)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Full plan generator (3–14 days)</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>Shopping list</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>Saved plans in database</td><td class="no">✗</td><td class="yes">✓</td></tr>
+          <tr><td>AdMob ads</td><td>Yes</td><td class="yes">None</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- §6 EN -->
+    <section id="en-6">
+      <h2><span class="sec-num">§ 6</span>Premium Subscription — Commercial Terms</h2>
+
+      <h3>6.1 Payment</h3>
+      <p>The Premium Subscription is billed on a recurring basis. The actual price, currency, and billing period are displayed in the Store at the time of purchase and may vary by region. The indicative price is <strong><span class="fill">21,99 PLN</span> per month</strong> <span class="fill">(brak opcji rocznej)</span>. Payments are processed by Google Play Store or Apple App Store via RevenueCat.</p>
+
+      <h3>6.2 Free Trial</h3>
+      <p>New users may be eligible for a <strong>7-day free trial</strong> of the Premium Subscription (subject to availability in your region and Store account eligibility). Trial eligibility is determined by the Store. If the Subscription is not cancelled before the trial ends, you will be charged for the first full billing period.</p>
+
+      <h3>6.3 Auto-Renewal</h3>
+      <p>The Premium Subscription <strong>auto-renews automatically</strong> for the next billing period unless cancelled at least 24 hours before the end of the current period (or as otherwise required by the applicable Store). Your Apple ID or Google Play account will be charged at the then-current price.</p>
+
+      <h3>6.4 Managing and Cancelling Your Subscription</h3>
+      <p>Subscriptions are managed exclusively through the Store where the purchase was made:</p>
+      <ul>
+        <li><strong>iOS:</strong> App Settings → Manage Subscription → App Store (<a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">apps.apple.com/account/subscriptions</a>)</li>
+        <li><strong>Android:</strong> App Settings → Manage Subscription → Google Play (<a href="https://play.google.com/store/account/subscriptions?package=bart.sek.purine_me" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a>)</li>
+      </ul>
+      <p>After cancellation, Premium access remains active until the end of the paid period or trial, as determined by the Store.</p>
+
+      <h3>6.5 Effects of Subscription Expiry or Cancellation</h3>
+      <div class="notice">
+        <strong>⚠️ Important:</strong> Upon expiry or cancellation of the Premium Subscription, the App <strong>permanently deletes</strong> all saved diet plans and clears the shopping list state stored locally on your device. You will revert to the Free Tier. Deleted data cannot be recovered. We recommend noting any important information before cancelling.
+      </div>
+
+      <h3>6.6 Failed Purchase</h3>
+      <p>If a transaction fails (payment declined, cancelled by the user), the Subscription will not be activated and no charge will be made.</p>
+
+      <h3>6.7 Refunds</h3>
+      <p>The App does not process refunds directly. All refund requests must be submitted to the applicable Store (Apple App Store or Google Play Store) in accordance with their respective refund policies. The Publisher is unable to issue refunds outside of the Store's processes.</p>
+    </section>
+
+    <!-- §7 EN -->
+    <section id="en-7">
+      <h2><span class="sec-num">§ 7</span>Advertisements (Free Tier)</h2>
+      <p>Free Tier users will see advertisements served by Google AdMob (banners and interstitial ads). Ads may link to third-party content, products, or services. The Publisher is not responsible for the content of advertisements or for the products, services, or practices of advertisers.</p>
+      <p>Information about data processing in connection with ad personalisation, the UMP Consent SDK, and your rights regarding personalised ads is set out in the Privacy Policy.</p>
+    </section>
+
+    <!-- §8 EN -->
+    <section id="en-8">
+      <h2><span class="sec-num">§ 8</span>User Data and Local Storage</h2>
+      <p>The App has no backend server. All User data (profile, meals, products, diet plans, settings) is stored <strong>exclusively on your device</strong> (SQLite, SharedPreferences) and is not transmitted to the Publisher's servers.</p>
+      <p>You are responsible for the security of your device and for making backups using your operating system's capabilities. The App does not include a built-in data export feature.</p>
+      <p>The <strong>Clear Data</strong> function (Settings → Clear Data) permanently and irreversibly deletes all App data from your device and resets the App to its default state.</p>
+      <p>For detailed information about data processing, including under GDPR, please refer to the Privacy Policy available in App Settings.</p>
+    </section>
+
+    <!-- §9 EN -->
+    <section id="en-9">
+      <h2><span class="sec-num">§ 9</span>User-Generated Content</h2>
+      <p>You may create and edit your own content within the App: custom products (name, category, nutritional values, uric acid content), meals and ingredients, and profile data.</p>
+      <p>User content is stored locally on your device only. The Publisher has no access to it, does not moderate it, and is not responsible for its accuracy or legality.</p>
+      <p>You agree to:</p>
+      <ul>
+        <li>provide accurate nutritional values for custom products; you are solely responsible for the correctness of the data you enter,</li>
+        <li>not create content that infringes applicable law or third-party rights,</li>
+        <li>not misrepresent the App's output as individualised medical advice or mislead others as to its medical nature.</li>
+      </ul>
+    </section>
+
+    <!-- §10 EN -->
+    <section id="en-10">
+      <h2><span class="sec-num">§ 10</span>Intellectual Property</h2>
+      <p>The App, its source code, user interface, logos, the name "Purine Me", built-in product catalogues, recipes, meal templates, and other assets are the intellectual property of the Publisher or are licensed to the Publisher by third parties.</p>
+      <p>The Publisher grants you a limited, non-exclusive, non-transferable, revocable licence to use the App solely for personal, non-commercial purposes in accordance with these Terms.</p>
+      <p>You may not:</p>
+      <ul>
+        <li>decompile, reverse-engineer, or disassemble the App,</li>
+        <li>copy, scrape, or bulk-download data from the App's product catalogue,</li>
+        <li>resell generated diet plans as your own commercial service,</li>
+        <li>create a competing database or service based on the App's assets,</li>
+        <li>remove or alter the Publisher's copyright notices or trade marks.</li>
+      </ul>
+      <p>The Open Sans typeface is provided under the SIL Open Font License (OFL) — see <code>assets/google_fonts/OFL.txt</code> within the App package.</p>
+    </section>
+
+    <!-- §11 EN -->
+    <section id="en-11">
+      <h2><span class="sec-num">§ 11</span>Accuracy Disclaimer</h2>
+      <p>The App presents <strong>estimated values</strong> calculated using publicly available mathematical formulas, including:</p>
+      <ul>
+        <li>estimated uric acid level (mg/dL) based on meals logged in the past 24 hours,</li>
+        <li>Basal Metabolic Rate (BMR) — Mifflin–St Jeor equation,</li>
+        <li>Total Daily Energy Expenditure (TDEE) based on activity level,</li>
+        <li>purine budget and blood concentration model (blood volume estimated from sex and body weight),</li>
+        <li>diet plan: calorie target ±10%, hydration model 3L/day (independent of logged water intake on the dashboard).</li>
+      </ul>
+      <p>The Publisher does not warrant the accuracy, completeness, or currency of any results. Figures may differ materially from laboratory test results. Dietary recommendations are general in nature and do not constitute individualised therapy or medical diagnosis. The Publisher is not liable for any health decisions made solely on the basis of App data.</p>
+    </section>
+
+    <!-- §12 EN -->
+    <section id="en-12">
+      <h2><span class="sec-num">§ 12</span>Local Notifications</h2>
+      <p>The App may send local reminder notifications (e.g. for meals, hydration, streaks). This feature is optional and requires OS-level permission (Android 13+ / iOS). Notification types and schedules can be configured in App Settings. The App uses a "smart push" model — generally no more than one notification per day.</p>
+      <p>The Publisher does not guarantee notification delivery. Delivery may be affected by OS settings, battery saving mode, missing permissions, and other hardware or software factors beyond the Publisher's control. Notifications are generated locally on your device — no external push server is involved.</p>
+    </section>
+
+    <!-- §13 EN -->
+    <section id="en-13">
+      <h2><span class="sec-num">§ 13</span>App Updates</h2>
+      <p>The Publisher may release updates via Google Play Store or Apple App Store. On Android, the App may use Google Play In-App Update, which may prompt you to install an update immediately.</p>
+      <p>The Publisher reserves the right to require an update before continued use where the update contains security patches or essential changes. App features may change between versions. The Publisher does not guarantee support for older OS versions indefinitely.</p>
+    </section>
+
+    <!-- §14 EN -->
+    <section id="en-14">
+      <h2><span class="sec-num">§ 14</span>Prohibited Use</h2>
+      <p>You agree to use the App in compliance with these Terms and applicable law. You must not:</p>
+      <ul>
+        <li>use the App in a manner that violates applicable national or international law,</li>
+        <li>circumvent or tamper with the payment or authorisation system (e.g. faking Premium status outside official Stores),</li>
+        <li>automate, scrape, or bulk-extract data from the App without the Publisher's written consent,</li>
+        <li>misrepresent App results as having a medical or diagnostic character,</li>
+        <li>impersonate the Publisher or imply the App is a certified medical device,</li>
+        <li>engage in any other activity that may infringe the rights of the Publisher or third parties.</li>
+      </ul>
+    </section>
+
+    <!-- §15 EN -->
+    <section id="en-15">
+      <h2><span class="sec-num">§ 15</span>Disclaimer of Warranties</h2>
+      <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, INCLUDING WITHOUT LIMITATION IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, DATA ACCURACY, OR UNINTERRUPTED OPERATION.</p>
+      <p>This disclaimer does not apply to the extent that applicable consumer protection laws (in particular Polish and EU law) prohibit such exclusion.</p>
+    </section>
+
+    <!-- §16 EN -->
+    <section id="en-16">
+      <h2><span class="sec-num">§ 16</span>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, the Publisher shall not be liable for:</p>
+      <ul>
+        <li>indirect, incidental, special, or consequential damages, including loss of data, device downtime, or other financial losses arising from your use of or inability to use the App,</li>
+        <li>health-related or financial harm resulting from health decisions made solely on the basis of App data,</li>
+        <li>loss of saved diet plans or other local data in the circumstances described in §6.5 and §8.</li>
+      </ul>
+      <p>Where a limitation of liability is legally permissible, the Publisher's total aggregate liability to you shall not exceed the amount of Premium Subscription fees paid by you in the <strong>12 months</strong> preceding the event giving rise to the claim. If you used only the Free Tier, the Publisher's maximum liability is <strong>€0 / $0</strong>.</p>
+      <p>These limitations do not apply where mandatory applicable law (including consumer protection law) prohibits them.</p>
+    </section>
+
+    <!-- §17 EN -->
+    <section id="en-17">
+      <h2><span class="sec-num">§ 17</span>Termination</h2>
+      <p><strong>By You:</strong> You may terminate your use of the App at any time by uninstalling it, using the Clear Data function, or cancelling your Premium Subscription in the Store. Uninstalling the App deletes all locally stored data.</p>
+      <p><strong>By the Publisher:</strong> The Publisher reserves the right to suspend or discontinue the App or any of its features, including ending support for specific OS versions, with reasonable notice where possible. For Premium subscribers, we will endeavour to provide advance notice where circumstances allow.</p>
+      <div class="notice">
+        <strong>Warning:</strong> Using the Clear Data function is <strong>irreversible</strong>. All local App data will be permanently deleted from your device.
+      </div>
+    </section>
+
+    <!-- §18 EN -->
+    <section id="en-18">
+      <h2><span class="sec-num">§ 18</span>Third Parties and External Links</h2>
+      <p>The App uses services from the following third parties:</p>
+      <ul>
+        <li><strong>Google LLC</strong> — Google AdMob (advertising), Google Play Store (distribution and payments), Google Play In-App Update.</li>
+        <li><strong>Apple Inc.</strong> — Apple App Store (distribution and payments).</li>
+        <li><strong>RevenueCat, Inc.</strong> — Premium Subscription status management.</li>
+      </ul>
+      <p>The App may include links to external websites (e.g. Privacy Policy, subscription management). The Publisher does not control and is not responsible for the content, policies, or practices of such sites. You access them at your own risk and should review their terms and privacy policies.</p>
+    </section>
+
+    <!-- §19 EN -->
+    <section id="en-19">
+      <h2><span class="sec-num">§ 19</span>Changes to Terms</h2>
+      <p>The Publisher reserves the right to update these Terms at any time. Material changes will be communicated via: <span class="fill">an update to the version number and date on this page and, where possible, an in-app notice</span>. The "Last updated" date in the header indicates the date of the latest revision.</p>
+      <p>Your continued use of the App after changes take effect constitutes acceptance of the updated Terms. For material changes affecting your rights, the Publisher may require you to re-accept the Terms on next launch.</p>
+    </section>
+
+    <!-- §20 EN -->
+    <section id="en-20">
+      <h2><span class="sec-num">§ 20</span>Governing Law and Dispute Resolution</h2>
+      <p>These Terms are governed by the laws of <span class="fill">Poland</span>. Any disputes arising from these Terms or use of the App shall be resolved by the District Court in Pułtusk or Regional Court in Ostrołęka (depending on the value of the dispute) <span class="fill"></span>.</p>
+      <p>For Users who are consumers residing in the European Union, mandatory consumer protection laws of the User's country of residence apply to the extent they provide greater protection. EU consumer Users may also use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. The Publisher's email for ODR purposes: <span class="fill">bartek.develop33@gmail.com</span>.</p>
+    </section>
+
+    <!-- §21 EN -->
+    <section id="en-21">
+      <h2><span class="sec-num">§ 21</span>Privacy Policy</h2>
+      <p>These Terms and the Privacy Policy are separate documents. The Privacy Policy sets out the rules for processing personal data and data related to App usage. The Privacy Policy is available in App Settings (Settings → Privacy &amp; Data) or at: <a href="https://bartekkesicki.github.io/purineMePrivacyPolicy/private%20policy.html</span></a>.</p>
+    </section>
+
+    <!-- §22 EN -->
+    <section id="en-22">
+      <h2><span class="sec-num">§ 22</span>Contact</h2>
+      <p>For questions about these Terms, complaints, or technical support, please contact us:</p>
+      <ul>
+        <li>Email: <span class="fill">bartek.develop33@gmail.com</span></li>
+        <li>Mailing address: <span class="fill">ul. Wiśniowa 5, 06-150 Świercze, Poland</span></li>
+      </ul>
+      <p>The Publisher will endeavour to respond to enquiries within a reasonable timeframe <span class="fill">up to 14 business days</span>.</p>
+    </section>
+
+    <footer>
+      <div>© <span class="fill">Bartłomiej Kęsicki</span> · All rights reserved</div>
+      <div>
+        <a href="https://bartekkesicki.github.io/purineMePrivacyPolicy/private%20policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+      </div>
+      <div>Last updated: <span class="fill">24.05.2026</span></div>
+    </footer>
+
+  </div><!-- /data-lang=en -->
+
+</div><!-- /page-wrap -->
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
